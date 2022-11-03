@@ -1,65 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
-    <title>Formulario sencillo</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario con bootstrap</title>
 </head>
+
 <body>
 
-<div>
-	<form action="">
-		<table border="1" style=" margin: auto; font-size: 20px;">
-			<tr style="text-align: center;">
-				<td style="background-color: rgb(179, 179, 240);"><strong>Nombres</strong></td>
-				<td style="background-color: rgb(179, 179, 240);"><strong>Valor</strong></td>
-			</tr>
-			<tr>
-				<td>Nombre</td>
-				<td><input size="30" type="text" name="nombres" id=""></td>
-			</tr>
-			<tr>
-				<td>Sexo</td>
-				<td>
-					<input type="radio" name="sexo" id="">Hombre<br>
-					<input type="radio" name="sexo">Mujer</td>
-			</tr>
-			<tr>
-				<td>Color de ojos</td>
-				<td>
-					<select style="margin-left: 5px;" name="" id="">
-						<option style="font-size: 20px;" value="">Marrones</option>
-						<option style="font-size: 20px;"  value="">Azules</option>
-						<option style="font-size: 20px;"  value="">Verdes</option>
-						<option style="font-size: 20px;"  value="">Grises</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>Cuales animales tienes</td>
-				<td>
-				<input type="checkbox" name="" id="">Gatos<br>
-				<input type="checkbox" name="" id="">Perros<br>
-				<input type="checkbox" name="" id="">Peces<br>
-				<input type="checkbox" name="" id="">otro
-			</td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center">
-					<div style="text-align: left;">Describe tus habilidades deportivas:</div>
-					<input style="height: 100px; width: 420px;" type="text" name="" id="">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2" align="center">
-					<input type="button" value="Enviar mi información" name="" id="">
-				</td>
-			</tr>
-		</table>
-	</form>
-</div>
+  <div class="card m-5">
+    <div class="card-header">
+      Ejemplo de formulario de pago
+    </div>
+    <form action="">
+      <div class="card-body">
+        <div class="alert alert-danger" role="alert">
+          Faltan algunos campos
+        </div>
 
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6">
+              <label for="numero-tarjeta">Número de tarjeta</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="numero-tajeta" placeholder="XXXX XXXX XXXX XXXX"
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col-2">
+              <label for="cvc">CVC</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="cvc" placeholder="CVC" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col-4">
+              <label for="cvc">Valor</label>
+              <div class="input-group my-2">
+                <span class="input-group-text">$</span>
+                <input type="text" class="form-control" id="valor" placeholder="Valor" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <label for="nombre">Nombres</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="nombre" placeholder="Nombres" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col">
+              <label for="apellido">Apellidos</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="apellido" placeholder="Apellidos" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label for="ciudad">Ciudad</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="ciudad" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col">
+              <label for="estado">Estado</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="estado" placeholder="Estado" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div class="col">
+              <label for="codigo-postal">Código postal</label>
+              <div class="input-group my-2">
+                <input type="text" class="form-control" id="codigo-postal" aria-label="Username"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div>Aceptamos</div>
+              <div class="card"
+                style="background-color: gray; border-radius: 3px; display: inline; padding: 4px;">
+                <input style="margin-left: 10px;" type="radio" name="" id=""><img class="mb-1"
+                  style="height: 30px; width: 30px;" src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="">
+                <input style="margin-left: 10px;" type="radio" name="" id=""><img class="mb-1"
+                  style="height: 12px; width: 20px;"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/200px-MasterCard_Logo.svg.png"
+                  alt="">
+                <input style="margin-left: 10px;" type="radio" name="" id=""><img class="mb-1"
+                  style="height: 25px; width: 25px;" src="https://cdn-icons-png.flaticon.com/512/349/349228.png" alt="">
+                <input style="margin-left: 10px;" type="radio" name="" id=""><img class="mb-1"
+                  style="height: 20px; width: 20px; margin-right: 10px;" src="https://cdn-icons-png.flaticon.com/512/825/825453.png" alt="">
+              </div>
+            </div>
+            <div class="col">
+              <div>Mensaje</div>
+              <textarea style="border-color:rgb(184, 181, 181);" name="" id="" cols="100" rows="5"></textarea>
+              <footer style="font-size: 12px; color: gray;"><i>Añade cualquier nota aquí</i></footer>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <div class="card-footer d-flex justify-content-end">
+        <a style="margin-right: 4px;" href="#" class="btn btn-secondary">Cancelar</a>
+        <a href="#" class="btn btn-primary">Enviar</a>
+      </div>
+  </div>
+
+
+  </div>
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  </form>
 </body>
+
 </html>
